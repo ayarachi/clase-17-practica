@@ -2,18 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid black;
 }
+
 .grid-container {
   display: grid;
-  grid-template-areas:
-    "header header header"
-    "main main main"
-    "footer footer footer";
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
   grid-template-rows: 200px 1fr 50px;
   grid-template-columns: 200px 1fr 1fr;
   height: 100vh;
   font-size: 20px;
 }
+
+.footer {
+  grid-area: footer;
+  padding: 20px;
+  font-size: 10px;
+  text-align: center;
+}
+
 .header {
   grid-area: header;
   font-size: 10px;
@@ -22,6 +29,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .header__container {
   display: flex;
   flex-direction: column;
@@ -29,68 +37,87 @@
   justify-content: space-around;
   height: 50%;
 }
+
 .header__container h2 {
   font-family: cursive;
   font-size: 25px;
 }
+
 .navbar ul {
   display: flex;
   font-size: 18px;
   gap: 30px;
   font-family: "Gill Sans";
 }
+
 nav > ul > li :hover {
   background-color: white;
   color: black;
   text-transform: uppercase;
 }
+
 .heder__container ul {
   display: flex;
 }
+
 .main {
   grid-area: main;
   font-size: 10px;
   text-align: center;
 }
+
 .banner {
   aspect-ratio: 2/1;
   background-image: url("../asset/annie-spratt-S7viz8JWxwY-unsplash.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 30px;
 }
+
 .banner h1 {
   font-family: "Gill Sans";
   color: grey;
-  font-size: 25px;
+  font-size: 30px;
 }
+
+.banner p {
+  font-family: "Gill Sans";
+  color: black;
+  font-size: 20px;
+}
+
 .footer {
   grid-area: footer;
   padding: 20px;
   font-size: 10px;
   text-align: center;
 }
+
 .grid1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas:
-    "grid-item-1 grid-item-1 grid-item-2 grid-item-3"
-    "grid-item-1 grid-item-1 grid-item-4 grid-item-4";
+  grid-template-areas: "grid-item-1 grid-item-1 grid-item-2 grid-item-3" "grid-item-1 grid-item-1 grid-item-4 grid-item-4";
+  padding: 50px;
 }
+
 .grid-item-1 {
   grid-area: grid-item-1;
   background-image: url("../asset/feey-bwsTJMnhcwE-unsplash.jpeg");
   background-size: cover;
   margin: 10px;
 }
+
 .grid-item-2 {
   grid-area: grid-item-2;
   margin: 10px;
 }
+
 .grid-item-3 {
   grid-area: grid-item-3;
   margin: 10px;
 }
+
 .grid-item-4 {
   grid-area: grid-item-4;
   margin: 10px;
@@ -101,5 +128,4 @@ nav > ul > li :hover {
   height: 100%;
 }
 
-@media (max-width: 768px) {
-}
+/*# sourceMappingURL=style.css.map */
